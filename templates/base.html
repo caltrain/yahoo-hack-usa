@@ -1,0 +1,24 @@
+<html>
+
+<head>
+
+<title> {% block title %}{% endblock %}</title>
+
+</head>
+
+<body>
+<h1>{% block head %}{% endblock %}</h1>
+{% block content %}{% endblock %}
+<br>
+<br>
+<br>
+<a href="/l/">Login Main Page</a>
+{% if user.is_authenticated %}
+    <a href="/l/logout/">Log out </a>
+{% else %}
+    <a href="/l/login/">Log in </a>
+{% endif %}
+
+</body>
+
+</html>

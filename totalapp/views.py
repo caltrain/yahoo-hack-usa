@@ -9,10 +9,10 @@ def index(request):
 	return HttpResponse("Hello, world. You're at the poll index.")
 
 def homepage(request):
-	return HttpResponse("homepage.")
+	return render_to_response('homepage.html', RequestContext(request))
 
 def album(request, album_id):
-	return HttpResponse("album page.")
+	return render_to_response('album.html', RequestContext(request))
 
 def login_main_page(request):
     return render_to_response('mainpage.html', RequestContext(request))
