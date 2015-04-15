@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 
+
 def index(request):
 	return HttpResponse("Hello, world. You're at the poll index.")
 
